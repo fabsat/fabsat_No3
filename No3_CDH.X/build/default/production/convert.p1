@@ -1,0 +1,352 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"11 convert.c
+[v _process_100 `(v ~T0 @X0 0 sf3`uc`*uc`*uc ]
+"12
+[v _process_10 `(v ~T0 @X0 0 sf3`uc`*uc`*uc ]
+"14
+[v _process_1_null `(v ~T0 @X0 0 sf3`uc`*uc`*uc ]
+"13
+[v _process_1 `(v ~T0 @X0 0 sf3`uc`*uc`*uc ]
+[; ;convert.h: 20: void number_to_string_char(char *buf, char num);
+[; ;convert.c: 7: typedef unsigned char uint8_t;
+[; ;convert.c: 11: static void process_100(char num, uint8_t *p_flag, char *p_buf);
+[; ;convert.c: 12: static void process_10(char num, uint8_t *p_flag, char *p_buf);
+[; ;convert.c: 13: static void process_1(char num, uint8_t *p_flag, char *p_buf);
+[; ;convert.c: 14: static void process_1_null(char num, uint8_t *p_flag, char *p_buf);
+"22 convert.c
+[v _number_to_string_char `(v ~T0 @X0 1 ef2`*uc`uc ]
+"23
+{
+[; ;convert.c: 22: void number_to_string_char(char *buf, char num)
+[; ;convert.c: 23: {
+[e :U _number_to_string_char ]
+"22
+[v _buf `*uc ~T0 @X0 1 r1 ]
+[v _num `uc ~T0 @X0 1 r2 ]
+"23
+[f ]
+"24
+[v _flag `uc ~T0 @X0 1 a ]
+[; ;convert.c: 24: uint8_t flag = 0;
+[e = _flag -> -> 0 `i `uc ]
+[; ;convert.c: 27: if(num == (-128))
+"27
+[e $ ! == -> _num `i -U -> 128 `i 2  ]
+[; ;convert.c: 28: {
+"28
+{
+[; ;convert.c: 29: buf[0] = '-';
+"29
+[e = *U + _buf * -> -> 0 `i `x -> -> # *U _buf `i `x -> -> 45 `ui `uc ]
+[; ;convert.c: 30: buf[1] = '1';
+"30
+[e = *U + _buf * -> -> 1 `i `x -> -> # *U _buf `i `x -> -> 49 `ui `uc ]
+[; ;convert.c: 31: buf[2] = '2';
+"31
+[e = *U + _buf * -> -> 2 `i `x -> -> # *U _buf `i `x -> -> 50 `ui `uc ]
+[; ;convert.c: 32: buf[3] = '8';
+"32
+[e = *U + _buf * -> -> 3 `i `x -> -> # *U _buf `i `x -> -> 56 `ui `uc ]
+[; ;convert.c: 33: buf[4] = '\0';
+"33
+[e = *U + _buf * -> -> 4 `i `x -> -> # *U _buf `i `x -> -> 0 `ui `uc ]
+[; ;convert.c: 35: return;
+"35
+[e $UE 1  ]
+"36
+}
+[e :U 2 ]
+[; ;convert.c: 36: }
+[; ;convert.c: 39: if(num < 0)
+"39
+[e $ ! < -> _num `i -> 0 `i 3  ]
+[; ;convert.c: 40: {
+"40
+{
+[; ;convert.c: 41: buf[flag] = '-';
+"41
+[e = *U + _buf * -> _flag `ux -> -> # *U _buf `ui `ux -> -> 45 `ui `uc ]
+[; ;convert.c: 42: flag++;
+"42
+[e ++ _flag -> -> 1 `i `uc ]
+[; ;convert.c: 43: num *= (-1);
+"43
+[e =* _num -> -U -> 1 `i `uc ]
+"44
+}
+[e :U 3 ]
+[; ;convert.c: 44: }
+[; ;convert.c: 47: if((100) <= num && num <= (127))
+"47
+[e $ ! && <= -> 100 `i -> _num `i <= -> _num `i -> 127 `i 4  ]
+[; ;convert.c: 48: {
+"48
+{
+[; ;convert.c: 49: process_100(num, &flag, buf);
+"49
+[e ( _process_100 (3 , , _num &U _flag _buf ]
+"50
+}
+[; ;convert.c: 50: }
+[e $U 5  ]
+"51
+[e :U 4 ]
+[; ;convert.c: 51: else if((10) <= num && num <= (99))
+[e $ ! && <= -> 10 `i -> _num `i <= -> _num `i -> 99 `i 6  ]
+[; ;convert.c: 52: {
+"52
+{
+[; ;convert.c: 53: process_10(num, &flag, buf);
+"53
+[e ( _process_10 (3 , , _num &U _flag _buf ]
+"54
+}
+[; ;convert.c: 54: }
+[e $U 7  ]
+"55
+[e :U 6 ]
+[; ;convert.c: 55: else if((0) <= num && num <= (9))
+[e $ ! && <= -> 0 `i -> _num `i <= -> _num `i -> 9 `i 8  ]
+[; ;convert.c: 56: {
+"56
+{
+[; ;convert.c: 59: process_1_null(num, &flag, buf);
+"59
+[e ( _process_1_null (3 , , _num &U _flag _buf ]
+"60
+}
+[; ;convert.c: 60: }
+[e $U 9  ]
+"61
+[e :U 8 ]
+[; ;convert.c: 61: else
+[; ;convert.c: 62: {
+"62
+{
+"64
+}
+[e :U 9 ]
+[e :U 7 ]
+[e :U 5 ]
+[; ;convert.c: 64: }
+[; ;convert.c: 65: }
+"65
+[e :UE 1 ]
+}
+"71
+[v _process_100 `(v ~T0 @X0 1 sf3`uc`*uc`*uc ]
+"72
+{
+[; ;convert.c: 71: static void process_100(char num, uint8_t *p_flag, char *p_buf)
+[; ;convert.c: 72: {
+[e :U _process_100 ]
+"71
+[v _num `uc ~T0 @X0 1 r1 ]
+[v _p_flag `*uc ~T0 @X0 1 r2 ]
+[v _p_buf `*uc ~T0 @X0 1 r3 ]
+"72
+[f ]
+"73
+[v _remainder_100 `uc ~T0 @X0 1 a ]
+[; ;convert.c: 73: uint8_t remainder_100 = num % 100;
+[e = _remainder_100 -> % -> _num `i -> 100 `i `uc ]
+[; ;convert.c: 75: p_buf[*p_flag] = (48) + 1;
+"75
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux -> + -> 48 `i -> 1 `i `uc ]
+[; ;convert.c: 76: (*p_flag)++;
+"76
+[e ++ *U _p_flag -> -> 1 `i `uc ]
+[; ;convert.c: 78: process_10(remainder_100, p_flag, p_buf);
+"78
+[e ( _process_10 (3 , , _remainder_100 _p_flag _p_buf ]
+[; ;convert.c: 79: }
+"79
+[e :UE 10 ]
+}
+"85
+[v _process_10 `(v ~T0 @X0 1 sf3`uc`*uc`*uc ]
+"86
+{
+[; ;convert.c: 85: static void process_10(char num, uint8_t *p_flag, char *p_buf)
+[; ;convert.c: 86: {
+[e :U _process_10 ]
+"85
+[v _num `uc ~T0 @X0 1 r1 ]
+[v _p_flag `*uc ~T0 @X0 1 r2 ]
+[v _p_buf `*uc ~T0 @X0 1 r3 ]
+"86
+[f ]
+"87
+[v _divide_10 `uc ~T0 @X0 1 a ]
+[; ;convert.c: 87: uint8_t divide_10 = num / 10;
+[e = _divide_10 -> / -> _num `i -> 10 `i `uc ]
+"88
+[v _remainder_10 `uc ~T0 @X0 1 a ]
+[; ;convert.c: 88: uint8_t remainder_10 = num % 10;
+[e = _remainder_10 -> % -> _num `i -> 10 `i `uc ]
+"89
+[v _val `uc ~T0 @X0 1 a ]
+[; ;convert.c: 89: uint8_t val = (48);
+[e = _val -> -> 48 `i `uc ]
+"90
+[v _i `uc ~T0 @X0 1 a ]
+[; ;convert.c: 90: uint8_t i;
+[; ;convert.c: 92: for(i = 0; i < divide_10; i++)
+"92
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 15  ]
+"93
+[e :U 12 ]
+[; ;convert.c: 93: {
+{
+[; ;convert.c: 94: val++;
+"94
+[e ++ _val -> -> 1 `i `uc ]
+"95
+}
+"92
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 15 ]
+[e $ < -> _i `i -> _divide_10 `i 12  ]
+[e :U 13 ]
+"95
+}
+[; ;convert.c: 95: }
+[; ;convert.c: 97: p_buf[*p_flag] = val;
+"97
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux _val ]
+[; ;convert.c: 98: (*p_flag)++;
+"98
+[e ++ *U _p_flag -> -> 1 `i `uc ]
+[; ;convert.c: 100: process_1(remainder_10, p_flag, p_buf);
+"100
+[e ( _process_1 (3 , , _remainder_10 _p_flag _p_buf ]
+[; ;convert.c: 101: }
+"101
+[e :UE 11 ]
+}
+"107
+[v _process_1 `(v ~T0 @X0 1 sf3`uc`*uc`*uc ]
+"108
+{
+[; ;convert.c: 107: static void process_1(char num, uint8_t *p_flag, char *p_buf)
+[; ;convert.c: 108: {
+[e :U _process_1 ]
+"107
+[v _num `uc ~T0 @X0 1 r1 ]
+[v _p_flag `*uc ~T0 @X0 1 r2 ]
+[v _p_buf `*uc ~T0 @X0 1 r3 ]
+"108
+[f ]
+"109
+[v _divide_1 `uc ~T0 @X0 1 a ]
+[; ;convert.c: 109: uint8_t divide_1 = num;
+[e = _divide_1 _num ]
+"110
+[v _val `uc ~T0 @X0 1 a ]
+[; ;convert.c: 110: uint8_t val = (48);
+[e = _val -> -> 48 `i `uc ]
+"111
+[v _i `i ~T0 @X0 1 a ]
+[; ;convert.c: 111: int i;
+[; ;convert.c: 113: for(i = 0; i < divide_1; i++)
+"113
+{
+[e = _i -> 0 `i ]
+[e $U 20  ]
+"114
+[e :U 17 ]
+[; ;convert.c: 114: {
+{
+[; ;convert.c: 115: val++;
+"115
+[e ++ _val -> -> 1 `i `uc ]
+"116
+}
+"113
+[e ++ _i -> 1 `i ]
+[e :U 20 ]
+[e $ < _i -> _divide_1 `i 17  ]
+[e :U 18 ]
+"116
+}
+[; ;convert.c: 116: }
+[; ;convert.c: 118: p_buf[*p_flag] = val;
+"118
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux _val ]
+[; ;convert.c: 119: (*p_flag)++;
+"119
+[e ++ *U _p_flag -> -> 1 `i `uc ]
+[; ;convert.c: 121: p_buf[*p_flag] = '\0';
+"121
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux -> -> 0 `ui `uc ]
+[; ;convert.c: 122: }
+"122
+[e :UE 16 ]
+}
+"126
+[v _process_1_null `(v ~T0 @X0 1 sf3`uc`*uc`*uc ]
+"127
+{
+[; ;convert.c: 126: static void process_1_null(char num, uint8_t *p_flag, char *p_buf)
+[; ;convert.c: 127: {
+[e :U _process_1_null ]
+"126
+[v _num `uc ~T0 @X0 1 r1 ]
+[v _p_flag `*uc ~T0 @X0 1 r2 ]
+[v _p_buf `*uc ~T0 @X0 1 r3 ]
+"127
+[f ]
+"128
+[v _divide_1 `uc ~T0 @X0 1 a ]
+[; ;convert.c: 128: uint8_t divide_1 = num;
+[e = _divide_1 _num ]
+"129
+[v _val `uc ~T0 @X0 1 a ]
+[; ;convert.c: 129: uint8_t val = (48);
+[e = _val -> -> 48 `i `uc ]
+"130
+[v _i `i ~T0 @X0 1 a ]
+[; ;convert.c: 130: int i;
+[; ;convert.c: 132: p_buf[*p_flag] = (48);
+"132
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux -> -> 48 `i `uc ]
+[; ;convert.c: 133: (*p_flag)++;
+"133
+[e ++ *U _p_flag -> -> 1 `i `uc ]
+[; ;convert.c: 135: for(i = 0; i < divide_1; i++)
+"135
+{
+[e = _i -> 0 `i ]
+[e $U 25  ]
+"136
+[e :U 22 ]
+[; ;convert.c: 136: {
+{
+[; ;convert.c: 137: val++;
+"137
+[e ++ _val -> -> 1 `i `uc ]
+"138
+}
+"135
+[e ++ _i -> 1 `i ]
+[e :U 25 ]
+[e $ < _i -> _divide_1 `i 22  ]
+[e :U 23 ]
+"138
+}
+[; ;convert.c: 138: }
+[; ;convert.c: 140: p_buf[*p_flag] = val;
+"140
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux _val ]
+[; ;convert.c: 141: (*p_flag)++;
+"141
+[e ++ *U _p_flag -> -> 1 `i `uc ]
+[; ;convert.c: 143: p_buf[*p_flag] = '\0';
+"143
+[e = *U + _p_buf * -> *U _p_flag `ux -> -> # *U _p_buf `ui `ux -> -> 0 `ui `uc ]
+[; ;convert.c: 144: }
+"144
+[e :UE 21 ]
+}

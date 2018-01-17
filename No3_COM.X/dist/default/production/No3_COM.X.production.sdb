@@ -1,0 +1,784 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"103 C:\Users\Owner\MPLABXProjects\No3_COM.X\main.c
+[e E1109 . `uc
+OBC1 0
+OBC2 1
+COM 2
+POW 3
+]
+[e E1115 . `uc
+CW 1
+DATA 2
+COMMAND 3
+]
+[e E1120 . `uc
+DATA_END 16
+DATA_CONTINUE 17
+]
+"113
+[e E1097 . `uc
+FALSE 0
+TRUE 1
+]
+"54 C:\Users\Owner\MPLABXProjects\No3_COM.X\protocol.c
+[e E1097 . `uc
+FALSE 0
+TRUE 1
+]
+"140
+[e E1101 . `uc
+OBC1 0
+OBC2 1
+COM 2
+POW 3
+]
+[e E1107 . `uc
+CW 1
+DATA 2
+COMMAND 3
+]
+[e E1112 . `uc
+DATA_END 16
+DATA_CONTINUE 17
+]
+"86 C:\Users\Owner\MPLABXProjects\No3_COM.X\spi_master.c
+[e E1101 . `uc
+OBC1 0
+OBC2 1
+COM 2
+POW 3
+]
+"51 C:\Users\Owner\MPLABXProjects\No3_COM.X\AD_value.c
+[v _ad_con_init ad_con_init `(i  1 e 2 0 ]
+"73
+[v _bit_shift bit_shift `(v  1 s 0 bit_shift ]
+"93
+[v _get_adcon get_adcon `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"21 C:\Users\Owner\MPLABXProjects\No3_COM.X\convert.c
+[v _number_to_string_char number_to_string_char `(v  1 e 0 0 ]
+"68
+[v convert@process_100 process_100 `(v  1 s 0 process_100 ]
+"82
+[v convert@process_10 process_10 `(v  1 s 0 process_10 ]
+"104
+[v convert@process_1 process_1 `(v  1 s 0 process_1 ]
+"37 C:\Users\Owner\MPLABXProjects\No3_COM.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"158
+[v _pic_port_init pic_port_init `(v  1 s 0 pic_port_init ]
+"36 C:\Users\Owner\MPLABXProjects\No3_COM.X\plati_temp.c
+[v _get_pt get_pt `(d  1 s 3 get_pt ]
+"62
+[v _get_temp get_temp `(d  1 e 3 0 ]
+"98 C:\Users\Owner\MPLABXProjects\No3_COM.X\protocol.c
+[v _sent_data_set sent_data_set `(uc  1 e 1 0 ]
+"139
+[v _send_data_master send_data_master `(v  1 e 0 0 ]
+"189
+[v _receive_data_master receive_data_master `(v  1 e 0 0 ]
+"241
+[v _extract_receive_packet extract_receive_packet `(v  1 e 0 0 ]
+"275
+[v _tx_packet_clear tx_packet_clear `(v  1 e 0 0 ]
+"306
+[v _rx_packet_clear rx_packet_clear `(v  1 e 0 0 ]
+"342
+[v _flag_check flag_check `(v  1 s 0 flag_check ]
+"377
+[v _uint8_data_set uint8_data_set `(v  1 s 0 uint8_data_set ]
+"399
+[v _uint16_data_set uint16_data_set `(v  1 s 0 uint16_data_set ]
+"428
+[v _double_data_set double_data_set `(v  1 s 0 double_data_set ]
+"457
+[v _uint16_to_byte_array uint16_to_byte_array `(v  1 s 0 uint16_to_byte_array ]
+"479
+[v _double_to_byte_array double_to_byte_array `(v  1 s 0 double_to_byte_array ]
+"37 C:\Users\Owner\MPLABXProjects\No3_COM.X\spi_master.c
+[v _spi_master_start spi_master_start `(v  1 e 0 0 ]
+"85
+[v _spi_master_send spi_master_send `(v  1 e 0 0 ]
+"149
+[v _spi_master_receive spi_master_receive `(v  1 e 0 0 ]
+"37 C:\Users\Owner\MPLABXProjects\No3_COM.X\uart.c
+[v _uart_init uart_init `(v  1 e 0 0 ]
+"60
+[v _put_char put_char `(v  1 e 0 0 ]
+"76
+[v _put_string put_string `(v  1 e 0 0 ]
+"66 C:\Users\Owner\MPLABXProjects\No3_COM.X\uint8_to_string.c
+[v _process_100 process_100 `(v  1 s 0 process_100 ]
+"88
+[v _process_10 process_10 `(v  1 s 0 process_10 ]
+"110
+[v _process_1 process_1 `(v  1 s 0 process_1 ]
+"160 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S593 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"175
+[u S600 . 1 `S593 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES600  1 e 1 @5 ]
+"209
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"270
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S406 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"287
+[u S415 . 1 `S406 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES415  1 e 1 @7 ]
+"331
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"392
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"787
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+[s S291 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"813
+[s S297 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S302 . 1 `S291 1 . 1 0 `S297 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES302  1 e 1 @20 ]
+"937
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1031
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1037
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1118
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1124
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S632 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1155
+[s S638 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S646 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S649 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S652 . 1 `S632 1 . 1 0 `S638 1 . 1 0 `S646 1 . 1 0 `S649 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES652  1 e 1 @31 ]
+"1288
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[s S610 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1303
+[u S617 . 1 `S610 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES617  1 e 1 @133 ]
+"1337
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1398
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+[s S270 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1415
+[u S279 . 1 `S270 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES279  1 e 1 @135 ]
+"1459
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1520
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S317 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"1836
+[s S326 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S331 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S337 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S342 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S347 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S352 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S357 . 1 `S317 1 . 1 0 `S326 1 . 1 0 `S331 1 . 1 0 `S337 1 . 1 0 `S342 1 . 1 0 `S347 1 . 1 0 `S352 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES357  1 e 1 @148 ]
+"1950
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"2030
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2169
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2175
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2527
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"2559
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2701
+[v _TRISB7 TRISB7 `VEb  1 e 0 @1079 ]
+"2715
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2717
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"2755
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+[s S131 . 33 `uc 1 data_type 1 0 `uc 1 payload_len 1 1 `[30]uc 1 payload 30 2 `uc 1 data_end_command 1 32 ]
+"49 C:\Users\Owner\MPLABXProjects\No3_COM.X\protocol.c
+[v _tx_packet tx_packet `S131  1 s 33 tx_packet ]
+"50
+[v _rx_packet rx_packet `S131  1 s 33 rx_packet ]
+"54
+[v _rx_packet_status rx_packet_status `E1097  1 e 1 0 ]
+"37 C:\Users\Owner\MPLABXProjects\No3_COM.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"101
+[v main@cmd cmd `uc  1 a 1 70 ]
+"47
+[v main@r_data r_data `[30]uc  1 a 30 30 ]
+"54
+[v main@temp_buf_c temp_buf_c `[5]uc  1 a 5 63 ]
+"56
+[v main@temp temp `d  1 a 3 60 ]
+"45
+[v main@i i `uc  1 a 1 72 ]
+"48
+[v main@r_data_len r_data_len `uc  1 a 1 71 ]
+"46
+[v main@r_data_type r_data_type `uc  1 a 1 69 ]
+"53
+[v main@temp_c temp_c `uc  1 a 1 68 ]
+"145
+} 0
+"37 C:\Users\Owner\MPLABXProjects\No3_COM.X\uart.c
+[v _uart_init uart_init `(v  1 e 0 0 ]
+{
+"47
+} 0
+"37 C:\Users\Owner\MPLABXProjects\No3_COM.X\spi_master.c
+[v _spi_master_start spi_master_start `(v  1 e 0 0 ]
+{
+"70
+} 0
+"98 C:\Users\Owner\MPLABXProjects\No3_COM.X\protocol.c
+[v _sent_data_set sent_data_set `(uc  1 e 1 0 ]
+{
+[v sent_data_set@p_data p_data `*.4v  1 a 1 wreg ]
+[v sent_data_set@p_data p_data `*.4v  1 a 1 wreg ]
+[v sent_data_set@data_len data_len `uc  1 p 1 12 ]
+[v sent_data_set@byte_of_type byte_of_type `uc  1 p 1 13 ]
+"101
+[v sent_data_set@p_data p_data `*.4v  1 a 1 12 ]
+"124
+} 0
+"377
+[v _uint8_data_set uint8_data_set `(v  1 s 0 uint8_data_set ]
+{
+[v uint8_data_set@p_data p_data `*.4uc  1 a 1 wreg ]
+[v uint8_data_set@p_data p_data `*.4uc  1 a 1 wreg ]
+[v uint8_data_set@data_len data_len `uc  1 p 1 0 ]
+[v uint8_data_set@p_data p_data `*.4uc  1 a 1 2 ]
+"385
+} 0
+"399
+[v _uint16_data_set uint16_data_set `(v  1 s 0 uint16_data_set ]
+{
+[v uint16_data_set@p_data p_data `*.4ui  1 a 1 wreg ]
+"401
+[v uint16_data_set@buf buf `[3]uc  1 a 3 7 ]
+"402
+[v uint16_data_set@i i `uc  1 a 1 11 ]
+"399
+[v uint16_data_set@p_data p_data `*.4ui  1 a 1 wreg ]
+[v uint16_data_set@data_len data_len `uc  1 p 1 5 ]
+[v uint16_data_set@p_data p_data `*.4ui  1 a 1 10 ]
+"414
+} 0
+"457
+[v _uint16_to_byte_array uint16_to_byte_array `(v  1 s 0 uint16_to_byte_array ]
+{
+[v uint16_to_byte_array@p_data p_data `*.4ui  1 a 1 wreg ]
+[v uint16_to_byte_array@p_data p_data `*.4ui  1 a 1 wreg ]
+[v uint16_to_byte_array@p_data_array p_data_array `*.1uc  1 p 1 0 ]
+"459
+[v uint16_to_byte_array@bit_mask bit_mask `DCCui  1 s 2 bit_mask ]
+"462
+[v uint16_to_byte_array@p_data p_data `*.4ui  1 a 1 4 ]
+"465
+} 0
+"428
+[v _double_data_set double_data_set `(v  1 s 0 double_data_set ]
+{
+[v double_data_set@p_data p_data `*.4d  1 a 1 wreg ]
+"430
+[v double_data_set@buf buf `[5]uc  1 a 5 0 ]
+"431
+[v double_data_set@i i `uc  1 a 1 6 ]
+"428
+[v double_data_set@p_data p_data `*.4d  1 a 1 wreg ]
+[v double_data_set@data_len data_len `uc  1 p 1 9 ]
+[v double_data_set@p_data p_data `*.4d  1 a 1 5 ]
+"443
+} 0
+"479
+[v _double_to_byte_array double_to_byte_array `(v  1 s 0 double_to_byte_array ]
+{
+[v double_to_byte_array@p_data p_data `*.4d  1 a 1 wreg ]
+[u S264 . 4 `d 1 data 3 0 `[4]uc 1 array 4 0 ]
+"486
+[v double_to_byte_array@converter converter `S264  1 a 4 3 ]
+"481
+[v double_to_byte_array@i i `uc  1 a 1 8 ]
+"479
+[v double_to_byte_array@p_data p_data `*.4d  1 a 1 wreg ]
+[v double_to_byte_array@p_data_array p_data_array `*.4uc  1 p 1 0 ]
+"489
+[v double_to_byte_array@p_data p_data `*.4d  1 a 1 7 ]
+"499
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"139 C:\Users\Owner\MPLABXProjects\No3_COM.X\protocol.c
+[v _send_data_master send_data_master `(v  1 e 0 0 ]
+{
+[v send_data_master@destination destination `E1101  1 a 1 wreg ]
+"141
+[v send_data_master@i i `uc  1 a 1 8 ]
+"139
+[v send_data_master@destination destination `E1101  1 a 1 wreg ]
+[v send_data_master@data_type data_type `E1107  1 p 1 4 ]
+[v send_data_master@data_end_command data_end_command `E1112  1 p 1 5 ]
+"144
+[v send_data_master@destination destination `E1101  1 a 1 9 ]
+"176
+} 0
+"275
+[v _tx_packet_clear tx_packet_clear `(v  1 e 0 0 ]
+{
+"277
+[v tx_packet_clear@i i `uc  1 a 1 1 ]
+"293
+} 0
+"189
+[v _receive_data_master receive_data_master `(v  1 e 0 0 ]
+{
+[v receive_data_master@destination destination `E1101  1 a 1 wreg ]
+"191
+[v receive_data_master@i i `uc  1 a 1 12 ]
+"189
+[v receive_data_master@destination destination `E1101  1 a 1 wreg ]
+"194
+[v receive_data_master@destination destination `E1101  1 a 1 13 ]
+"225
+} 0
+"342
+[v _flag_check flag_check `(v  1 s 0 flag_check ]
+{
+[v flag_check@destination destination `E1101  1 a 1 wreg ]
+"344
+[v flag_check@flag flag `E1097  1 a 1 8 ]
+"342
+[v flag_check@destination destination `E1101  1 a 1 wreg ]
+[v flag_check@destination destination `E1101  1 a 1 9 ]
+"363
+} 0
+"85 C:\Users\Owner\MPLABXProjects\No3_COM.X\spi_master.c
+[v _spi_master_send spi_master_send `(v  1 e 0 0 ]
+{
+[v spi_master_send@destination destination `E1101  1 a 1 wreg ]
+"87
+[v spi_master_send@buf buf `uc  1 a 1 2 ]
+"85
+[v spi_master_send@destination destination `E1101  1 a 1 wreg ]
+[v spi_master_send@data data `uc  1 p 1 0 ]
+"90
+[v spi_master_send@destination destination `E1101  1 a 1 3 ]
+"135
+} 0
+"149
+[v _spi_master_receive spi_master_receive `(v  1 e 0 0 ]
+{
+[v spi_master_receive@destination destination `E1101  1 a 1 wreg ]
+"151
+[v spi_master_receive@buf buf `uc  1 a 1 3 ]
+"149
+[v spi_master_receive@destination destination `E1101  1 a 1 wreg ]
+[v spi_master_receive@p_get p_get `*.39uc  1 p 2 0 ]
+"154
+[v spi_master_receive@destination destination `E1101  1 a 1 4 ]
+"199
+} 0
+"76 C:\Users\Owner\MPLABXProjects\No3_COM.X\uart.c
+[v _put_string put_string `(v  1 e 0 0 ]
+{
+[v put_string@str str `*.24uc  1 a 1 wreg ]
+[v put_string@str str `*.24uc  1 a 1 wreg ]
+[v put_string@str str `*.24uc  1 a 1 2 ]
+"85
+} 0
+"60
+[v _put_char put_char `(v  1 e 0 0 ]
+{
+[v put_char@byte_data byte_data `uc  1 a 1 wreg ]
+[v put_char@byte_data byte_data `uc  1 a 1 wreg ]
+[v put_char@byte_data byte_data `uc  1 a 1 0 ]
+"70
+} 0
+"158 C:\Users\Owner\MPLABXProjects\No3_COM.X\main.c
+[v _pic_port_init pic_port_init `(v  1 s 0 pic_port_init ]
+{
+"173
+} 0
+"21 C:\Users\Owner\MPLABXProjects\No3_COM.X\convert.c
+[v _number_to_string_char number_to_string_char `(v  1 e 0 0 ]
+{
+[v number_to_string_char@buf buf `*.4uc  1 a 1 wreg ]
+"23
+[v number_to_string_char@flag flag `uc  1 a 1 15 ]
+"21
+[v number_to_string_char@buf buf `*.4uc  1 a 1 wreg ]
+[v number_to_string_char@num num `uc  1 p 1 12 ]
+"23
+[v number_to_string_char@buf buf `*.4uc  1 a 1 16 ]
+"62
+} 0
+"68
+[v convert@process_100 process_100 `(v  1 s 0 process_100 ]
+{
+[v convert@process_100@num num `uc  1 a 1 wreg ]
+"70
+[v convert@process_100@remainder_100 remainder_100 `uc  1 a 1 11 ]
+"68
+[v convert@process_100@num num `uc  1 a 1 wreg ]
+[v convert@process_100@p_flag p_flag `*.4uc  1 p 1 5 ]
+[v convert@process_100@p_buf p_buf `*.4uc  1 p 1 6 ]
+"70
+[v convert@process_100@num num `uc  1 a 1 10 ]
+"76
+} 0
+"82
+[v convert@process_10 process_10 `(v  1 s 0 process_10 ]
+{
+[v convert@process_10@num num `uc  1 a 1 wreg ]
+"87
+[v convert@process_10@i i `uc  1 a 1 3 ]
+"86
+[v convert@process_10@val val `uc  1 a 1 2 ]
+"85
+[v convert@process_10@remainder_10 remainder_10 `uc  1 a 1 1 ]
+"84
+[v convert@process_10@divide_10 divide_10 `uc  1 a 1 0 ]
+"82
+[v convert@process_10@num num `uc  1 a 1 wreg ]
+[v convert@process_10@p_flag p_flag `*.4uc  1 p 1 9 ]
+[v convert@process_10@p_buf p_buf `*.4uc  1 p 1 10 ]
+"84
+[v convert@process_10@num num `uc  1 a 1 4 ]
+"98
+} 0
+"104
+[v convert@process_1 process_1 `(v  1 s 0 process_1 ]
+{
+[v convert@process_1@num num `uc  1 a 1 wreg ]
+"108
+[v convert@process_1@i i `i  1 a 2 5 ]
+"107
+[v convert@process_1@val val `uc  1 a 1 8 ]
+"106
+[v convert@process_1@divide_1 divide_1 `uc  1 a 1 7 ]
+"104
+[v convert@process_1@num num `uc  1 a 1 wreg ]
+[v convert@process_1@p_flag p_flag `*.4uc  1 p 1 0 ]
+[v convert@process_1@p_buf p_buf `*.4uc  1 p 1 1 ]
+"106
+[v convert@process_1@num num `uc  1 a 1 4 ]
+"119
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"62 C:\Users\Owner\MPLABXProjects\No3_COM.X\plati_temp.c
+[v _get_temp get_temp `(d  1 e 3 0 ]
+{
+"64
+[v get_temp@t_average t_average `d  1 a 3 69 ]
+"65
+[v get_temp@i i `i  1 a 2 67 ]
+"74
+} 0
+"36
+[v _get_pt get_pt `(d  1 s 3 get_pt ]
+{
+"39
+[v get_pt@a a `d  1 a 3 27 ]
+"38
+[v get_pt@t1 t1 `d  1 a 3 24 ]
+[v get_pt@r1 r1 `d  1 a 3 18 ]
+"40
+[v get_pt@b b `d  1 a 3 6 ]
+"38
+[v get_pt@t2 t2 `d  1 a 3 3 ]
+[v get_pt@r2 r2 `d  1 a 3 0 ]
+"49
+} 0
+"93 C:\Users\Owner\MPLABXProjects\No3_COM.X\AD_value.c
+[v _get_adcon get_adcon `(d  1 e 3 0 ]
+{
+"97
+[v get_adcon@voltage_value voltage_value `d  1 a 3 19 ]
+"96
+[v get_adcon@ad_value ad_value `ui  1 a 2 24 ]
+[s S628 . 2 `uc 1 my_adres_h 1 0 `uc 1 my_adres_l 1 1 ]
+"98
+[v get_adcon@my_adres my_adres `S628  1 a 2 22 ]
+"117
+} 0
+"73
+[v _bit_shift bit_shift `(v  1 s 0 bit_shift ]
+{
+[v bit_shift@p_ad_value p_ad_value `*.4ui  1 a 1 wreg ]
+[v bit_shift@p_ad_value p_ad_value `*.4ui  1 a 1 wreg ]
+[s S628 . 2 `uc 1 my_adres_h 1 0 `uc 1 my_adres_l 1 1 ]
+[v bit_shift@p_adres p_adres `*.4S628  1 p 1 0 ]
+"75
+[v bit_shift@bit_mask_for_l bit_mask_for_l `DCCuc  1 s 1 bit_mask_for_l ]
+"77
+[v bit_shift@p_ad_value p_ad_value `*.4ui  1 a 1 5 ]
+"80
+} 0
+"28 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 26 ]
+"20
+} 0
+"56 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 53 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 57 ]
+[v ___ftdiv@exp exp `uc  1 a 1 56 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 52 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 42 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 45 ]
+"86
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 41 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 40 ]
+[v ___ftadd@sign sign `uc  1 a 1 39 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 29 ]
+[v ___ftadd@f2 f2 `f  1 p 3 32 ]
+"148
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"241 C:\Users\Owner\MPLABXProjects\No3_COM.X\protocol.c
+[v _extract_receive_packet extract_receive_packet `(v  1 e 0 0 ]
+{
+[v extract_receive_packet@p_data_type_buf p_data_type_buf `*.4uc  1 a 1 wreg ]
+"243
+[v extract_receive_packet@i i `uc  1 a 1 6 ]
+"241
+[v extract_receive_packet@p_data_type_buf p_data_type_buf `*.4uc  1 a 1 wreg ]
+[v extract_receive_packet@p_data_buf p_data_buf `*.4uc  1 p 1 2 ]
+[v extract_receive_packet@p_data_len_buf p_data_len_buf `*.4uc  1 p 1 3 ]
+"246
+[v extract_receive_packet@p_data_type_buf p_data_type_buf `*.4uc  1 a 1 5 ]
+"262
+} 0
+"306
+[v _rx_packet_clear rx_packet_clear `(v  1 e 0 0 ]
+{
+"308
+[v rx_packet_clear@i i `uc  1 a 1 1 ]
+"324
+} 0
+"51 C:\Users\Owner\MPLABXProjects\No3_COM.X\AD_value.c
+[v _ad_con_init ad_con_init `(i  1 e 2 0 ]
+{
+"59
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 9 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 8 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 0 ]
+"73
+} 0

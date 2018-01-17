@@ -1,0 +1,107 @@
+
+# 1 "convert.c"
+
+# 20 "convert.h"
+void number_to_string_char(char *buf, char num);
+
+# 7 "convert.c"
+typedef unsigned char uint8_t;
+
+
+
+static void process_100(char num, uint8_t *p_flag, char *p_buf);
+static void process_10(char num, uint8_t *p_flag, char *p_buf);
+static void process_1(char num, uint8_t *p_flag, char *p_buf);
+
+# 21
+void number_to_string_char(char *buf, char num)
+{
+uint8_t flag = 0;
+
+
+if(num == (-128))
+{
+buf[0] = '-';
+buf[1] = '1';
+buf[2] = '2';
+buf[3] = '8';
+buf[4] = '\0';
+
+return;
+}
+
+
+if(num < 0)
+{
+buf[flag] = '-';
+flag++;
+num *= (-1);
+}
+
+
+if((100) <= num && num <= (127))
+{
+process_100(num, &flag, buf);
+}
+else if((10) <= num && num <= (99))
+{
+process_10(num, &flag, buf);
+}
+else if((0) <= num && num <= (9))
+{
+process_1(num, &flag, buf);
+}
+else
+{
+
+}
+}
+
+# 68
+static void process_100(char num, uint8_t *p_flag, char *p_buf)
+{
+uint8_t remainder_100 = num % 100;
+
+p_buf[*p_flag] = (0x30) + 1;
+(*p_flag)++;
+
+process_10(remainder_100, p_flag, p_buf);
+}
+
+# 82
+static void process_10(char num, uint8_t *p_flag, char *p_buf)
+{
+uint8_t divide_10 = num / 10;
+uint8_t remainder_10 = num % 10;
+uint8_t val = (0x30);
+uint8_t i;
+
+for(i = 0; i < divide_10; i++)
+{
+val++;
+}
+
+p_buf[*p_flag] = val;
+(*p_flag)++;
+
+process_1(remainder_10, p_flag, p_buf);
+}
+
+# 104
+static void process_1(char num, uint8_t *p_flag, char *p_buf)
+{
+uint8_t divide_1 = num;
+uint8_t val = (0x30);
+int i;
+
+for(i = 0; i < divide_1; i++)
+{
+val++;
+}
+
+p_buf[*p_flag] = val;
+(*p_flag)++;
+
+p_buf[*p_flag] = '\0';
+}
+
